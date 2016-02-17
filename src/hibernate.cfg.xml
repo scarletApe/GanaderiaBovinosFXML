@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration> 
+    <session-factory>
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect </property>
+        <property name="hibernate.connection.driver_class"> 
+            com.mysql.jdbc.Driver
+        </property>
+        <!-- Assume students is the database name --> 
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost/granja
+        </property>
+        <property name="hibernate.connection.username"> 
+            root
+        </property>
+        <property name="hibernate.connection.password">
+            mysql
+        </property>
+        
+        <property name="hibernate.c3p0.min_size" >5</property>
+        <property name="hibernate.c3p0.max_size" >20</property>
+        <property name="hibernate.c3p0.timeout" >300</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+        
+        <!-- List of XML mapping files --> 
+        <mapping resource="marmar/ganaderia_fxml/entidades_config/Bovino.hbm.xml" class="marmar/ganaderia_fxml/entidades/Bovino.java"/>
+        <mapping resource="marmar/ganaderia_fxml/entidades_config/Raza.hbm.xml"   class="marmar/ganaderia_fxml/entidades/Raza.java"/>
+        <mapping resource="marmar/ganaderia_fxml/entidades_config/Rancho.hbm.xml" class="marmar/ganaderia_fxml/entidades/Rancho.java"/>
+        <mapping resource="marmar/ganaderia_fxml/entidades_config/User.hbm.xml"   class="marmar/ganaderia_fxml/entidades/User.java"/>
+        <mapping resource="marmar/ganaderia_fxml/entidades_config/Venta.hbm.xml"  class="mmarmar/ganaderia_fxml/entidades/Venta.java"/>
+        <mapping resource="marmar/ganaderia_fxml/entidades_config/Vacunacion.hbm.xml" class="marmar/ganaderia_fxml/entidades/Vacunacion.java"/>
+        <!--<mapping resource="entidades_config/BovVac.hbm.xml" class="entidades/BovVac.java"/>-->
+    </session-factory>
+</hibernate-configuration>

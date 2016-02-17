@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   
+    <class name="marmar.ganaderia_fxml.entidades.Bovino" table="Bovino"> 
+        <meta attribute="class-description">
+            Esta clase representa a un bovino.
+        </meta>
+        <id name="id_bovino" type="int" column="id_bovino">
+            <generator class="native"/>
+        </id>
+        <property name="num_arete" column="num_arete" type="string"/> 
+        <property name="sexo" column="sexo" type="string"/> 
+        <property name="pelaje" column="pelaje" type="string"/> 
+        <property name="melona" column="melona" type="string"/> 
+        <property name="apodo" column="apodo" type="string"/> 
+        <property name="comentario" column="comentario" type="string"/> 
+        <property name="fecha_nacimiento" column="fecha_nacimiento" type="date"/> 
+        <property name="fecha_muerte" column="fecha_muerte" type="date"/> 
+      
+        <many-to-one name="raza" column="id_raza"
+                   class="marmar.ganaderia_fxml.entidades.Raza" not-null="true"/>
+
+        <many-to-one name="venta" column="id_venta"
+                   class="marmar.ganaderia_fxml.entidades.Venta" not-null="false"/>
+      
+        <set name="vacunas" cascade="save-update" table="Bov_Vac"> 
+            <key column="id_bovino"/>
+            <many-to-many column="id_vacunacion" class="marmar.ganaderia_fxml.entidades.Vacunacion"/>
+        </set>
+    </class>
+
+</hibernate-mapping>

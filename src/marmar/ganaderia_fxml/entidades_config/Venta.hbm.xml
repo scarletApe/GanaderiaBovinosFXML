@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   
+   <class name="marmar.ganaderia_fxml.entidades.Venta" table="Venta"> 
+      <meta attribute="class-description">
+         Esta clase representa una venta.
+          En una venta se venden de un a mas animales.
+      </meta>
+      <id name="id_venta" type="int" column="id_venta">
+         <generator class="native"/>
+      </id>
+      <property name="comprador" column="comprador" type="string"/> 
+      <property name="fecha_venta" column="fecha_venta" type="date"/> 
+      <property name="monto" column="monto" type="big_decimal"/> 
+   </class>
+
+</hibernate-mapping>

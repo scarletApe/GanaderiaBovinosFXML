@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   
+   <class name="marmar.ganaderia_fxml.entidades.Rancho" table="Rancho"> 
+      <meta attribute="class-description">
+         Esta clase representa el rancho como la empresa que es.
+      </meta>
+      <id name="id_rancho" type="int" column="id_rancho">
+         <generator class="native"/>
+      </id>
+      <property name="nombre" column="nombre" type="string"/> 
+      <property name="rfc" column="rfc" type="string"/> 
+      <property name="fiero" column="fiero" type="string"/> 
+      <property name="fecha_establecimiento" column="fecha_establecimiento" type="date"/> 
+      <property name="domicilio" column="domicilio" type="string"/> 
+   </class>
+
+</hibernate-mapping>

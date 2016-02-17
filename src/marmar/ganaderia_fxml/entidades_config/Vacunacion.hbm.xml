@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   
+   <class name="marmar.ganaderia_fxml.entidades.Vacunacion" table="Vacunacion"> 
+      <meta attribute="class-description">
+         Esta clase representa un evento de vacunacion.
+          Se vacunan mas de una vaca en el mismo evento.
+      </meta>
+      <id name="id_vacunacion" type="int" column="id_vacunacion">
+         <generator class="native"/>
+      </id>
+      <property name="tipo" column="tipo" type="string"/> 
+      <property name="medico" column="medico" type="string"/> 
+      <property name="formula" column="formula" type="string"/> 
+      <property name="fecha_vacunacion" column="fecha_vacunacion" type="date"/> 
+   </class>
+
+</hibernate-mapping>

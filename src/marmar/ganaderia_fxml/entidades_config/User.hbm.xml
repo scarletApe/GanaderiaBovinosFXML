@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   
+   <class name="marmar.ganaderia_fxml.entidades.User" table="User"> 
+      <meta attribute="class-description">
+         Esta clase representa el usuario para poder hacer log in.
+      </meta>
+      <id name="username" type="string" column="username">
+         <generator class="native"/>
+      </id>
+      <property name="password" column="password" type="string"/> 
+      <property name="usertype" column="usertype" type="integer"/> 
+   </class>
+
+</hibernate-mapping>

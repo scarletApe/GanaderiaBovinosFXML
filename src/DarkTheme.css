@@ -1,0 +1,236 @@
+.background {
+    -fx-background-color: #81472e;
+}
+
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label-bright {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label-header {
+    -fx-font-size: 18pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.table-view {
+    -fx-base: #be804a;
+    -fx-control-inner-background: #be804a;
+    -fx-background-color: #be804a;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80%) 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 14px; /*pt*/
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+.split-pane:horizontal > * > .split-pane-divider {
+    -fx-border-color: transparent #be804a transparent #be804a;
+    -fx-background-color: transparent, derive(#be804a,20%);
+}
+
+.split-pane {
+    -fx-padding: 1 0 0 0;
+}
+
+.menu-bar {
+    -fx-background-color: derive(#be804a,20%);
+    -fx-selection-bar: derive(-fx-background,-7%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+
+
+
+/* 
+ * Metro style Push Button
+ * Author: Pedro Duque Vieira
+ * http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/
+ */
+.button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #009248;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: white;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #02b65f;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: #10773f;
+  -fx-text-fill: whitesmoke;
+}
+
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.tab{
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+    -fx-background-color: linear-gradient(#be804a, #81472e);
+}
+
+.tab:hover {
+    -fx-background-color: derive(#be804a,30%);
+}
+
+.tab:pressed, .tab:focused{
+  -fx-background-color: #be804a;
+  -fx-text-fill: whitesmoke;
+}
+
+.tab-header-background{
+    -fx-background-color: #975b3f;
+}
+
+.tab-label{
+    -fx-text-fill: white;
+}
+
+
+/*
+.text-field, .text-area{
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #3d7156;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: white;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+.content{
+    -fx-background-color: #3d7156;
+}
+*/
+.split-pane-divider{
+    -fx-background-color: #be804a;
+}
+
+
+
+
+.default-color0.chart-pie { -fx-pie-color: #ffd700; }
+.default-color1.chart-pie { -fx-pie-color: #ffa500; }
+.default-color2.chart-pie { -fx-pie-color: #860061; }
+.default-color3.chart-pie { -fx-pie-color: #adff2f; }
+.default-color4.chart-pie { -fx-pie-color: #ff5700; }
+
+.chart{
+    -fx-stroke: #8b4513;
+    -fx-fill: #8b4513;
+    -fx-text-fill: black;
+}
+
+.chart-label, .chart-title {
+    -fx-fill: #8b4513;
+    -fx-font-size: 2em;
+    -fx-text-fill: white;
+} 
+.chart-legend .label{
+   -fx-background-color:  #fafad2;
+   -fx-stroke: #daa520;
+   -fx-text-fill: black;
+}   
+
+.axis {
+    -fx-font-size: 1.3em;
+    -fx-text-fill: black;
+    -fx-tick-label-fill: white;
+    -fx-font-family: Tahoma;
+    -fx-tick-length: 10;
+    -fx-minor-tick-length: 5;
+}
+
+.axis .tick-mark {
+    -fx-font-size: .9em;
+}
+
+.axis-tick-mark {
+    -fx-stroke: white;
+    -fx-stroke-width: 3; 
+}
+.axis-minor-tick-mark {
+    -fx-stroke: white;
+}
+
+
